@@ -300,7 +300,7 @@ func networkChainPublishHandler(cmd *cobra.Command, args []string) error {
 	if !noCheck {
 		if err := c.Init(cmd.Context(), cacheStorage); err != nil {
 			// initialize the chain for checking.
-			return fmt.Errorf("blockchain init failed: %w", err)
+			return fmt.Errorf("blockchain init failed because of: %w", err)
 		}
 	}
 
